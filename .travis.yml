@@ -3,14 +3,14 @@
     - docker
 
   script:
-    - docker build -t mannydesigns/node .
-    - docker images mannydesigns/node
+    - docker build -t gabrielrueda/node .
+    - docker images gabrielrueda/node
 
   before_deploy:
     - docker login -u gabrielrueda -p Anguiano01*
 
   deploy:
     provider: script
-    script: docker push mannydesigns/node
+    script: docker push gabrielrueda/node
     on:
         branch: master
